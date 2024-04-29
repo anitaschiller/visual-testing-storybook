@@ -9,7 +9,7 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_32d95fc38779afd"
+    "chromatic": "npx chromatic --project-token=$(grep -oE 'CHROMATIC_PROJECT_TOKEN=.*' .env.local | cut -d'=' -f2)"
   },
   "dependencies": {
     "next": "14.1.4",

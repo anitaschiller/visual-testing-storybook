@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {fn} from "@storybook/test";
-import Card from "@/components/Card";
+import Button from "@/components/Button";
 
 const meta = {
-    title: 'Components/Card',
-    component: Card,
+    title: 'Components/Button',
+    component: Button,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
         layout: 'centered',
@@ -12,13 +11,13 @@ const meta = {
     // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
     tags: ['autodocs'],
     // More on argTypes: https://storybook.js.org/docs/api/argtypes
-} satisfies Meta<typeof Card>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        backgroundColor: 'lightgray',
+        text: 'Click me'
     },
 };
